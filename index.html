@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandglass for BGP</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem 0;
+        }
+        
+        .countdown-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .countdown-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .countdown-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .countdown-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .countdown-display {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .time-unit {
+            text-align: center;
+            min-width: 80px;
+        }
+        
+        .time-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #764ba2;
+            display: block;
+        }
+        
+        .time-label {
+            font-size: 0.9rem;
+            color: #7a7a7a;
+            text-transform: uppercase;
+        }
+        
+        .header-title {
+            text-align: center;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .icon-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="countdown-container">
+        <h1 class="header-title">
+            <i class="fas fa-clock"></i> Sandglass for BGP
+        </h1>
+        
+        <div id="countdown-1" class="countdown-card">
+            <div class="countdown-title">
+                <div class="icon-circle">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <span>2026年3月31日まで</span>
+            </div>
+            <div class="countdown-display">
+                <div class="time-unit">
+                    <span class="time-number" id="days-1">0</span>
+                    <span class="time-label">日</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="hours-1">0</span>
+                    <span class="time-label">時間</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="minutes-1">0</span>
+                    <span class="time-label">分</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="seconds-1">0</span>
+                    <span class="time-label">秒</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="countdown-2" class="countdown-card">
+            <div class="countdown-title">
+                <div class="icon-circle">
+                    <i class="fas fa-bowl-rice"></i>
+                </div>
+                <span>2026年5月2日まで</span>
+            </div>
+            <div class="countdown-display">
+                <div class="time-unit">
+                    <span class="time-number" id="days-2">0</span>
+                    <span class="time-label">日</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="hours-2">0</span>
+                    <span class="time-label">時間</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="minutes-2">0</span>
+                    <span class="time-label">分</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="seconds-2">0</span>
+                    <span class="time-label">秒</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="countdown-3" class="countdown-card">
+            <div class="countdown-title">
+                <div class="icon-circle">
+                    <i class="fas fa-anchor"></i>
+                </div>
+                <span>2026年5月23日まで</span>
+            </div>
+            <div class="countdown-display">
+                <div class="time-unit">
+                    <span class="time-number" id="days-3">0</span>
+                    <span class="time-label">日</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="hours-3">0</span>
+                    <span class="time-label">時間</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="minutes-3">0</span>
+                    <span class="time-label">分</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="seconds-3">0</span>
+                    <span class="time-label">秒</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="countdown-4" class="countdown-card">
+            <div class="countdown-title">
+                <div class="icon-circle">
+                    <i class="fas fa-ship"></i>
+                </div>
+                <span>2026年5月30日まで</span>
+            </div>
+            <div class="countdown-display">
+                <div class="time-unit">
+                    <span class="time-number" id="days-4">0</span>
+                    <span class="time-label">日</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="hours-4">0</span>
+                    <span class="time-label">時間</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="minutes-4">0</span>
+                    <span class="time-label">分</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="seconds-4">0</span>
+                    <span class="time-label">秒</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="countdown-5" class="countdown-card">
+            <div class="countdown-title">
+                <div class="icon-circle">
+                    <i class="fas fa-baseball"></i>
+                </div>
+                <span>2026年7月12日まで</span>
+            </div>
+            <div class="countdown-display">
+                <div class="time-unit">
+                    <span class="time-number" id="days-5">0</span>
+                    <span class="time-label">日</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="hours-5">0</span>
+                    <span class="time-label">時間</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="minutes-5">0</span>
+                    <span class="time-label">分</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="seconds-5">0</span>
+                    <span class="time-label">秒</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const countdowns = [
+            { date: new Date('2026-03-31T00:00:00'), id: 1 },
+            { date: new Date('2026-05-02T00:00:00'), id: 2 },
+            { date: new Date('2026-05-23T00:00:00'), id: 3 },
+            { date: new Date('2026-05-30T00:00:00'), id: 4 },
+            { date: new Date('2026-07-12T00:00:00'), id: 5 }
+        ];
+
+        function updateCountdown(targetDate, id) {
+            const now = new Date();
+            const difference = targetDate - now;
+
+            if (difference <= 0) {
+                document.getElementById(`days-${id}`).textContent = '0';
+                document.getElementById(`hours-${id}`).textContent = '0';
+                document.getElementById(`minutes-${id}`).textContent = '0';
+                document.getElementById(`seconds-${id}`).textContent = '0';
+                return;
+            }
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            document.getElementById(`days-${id}`).textContent = days;
+            document.getElementById(`hours-${id}`).textContent = hours;
+            document.getElementById(`minutes-${id}`).textContent = minutes;
+            document.getElementById(`seconds-${id}`).textContent = seconds;
+        }
+
+        function updateAllCountdowns() {
+            countdowns.forEach(countdown => {
+                updateCountdown(countdown.date, countdown.id);
+            });
+        }
+
+        updateAllCountdowns();
+        setInterval(updateAllCountdowns, 1000);
+    </script>
+</body>
+</html>
