@@ -1,8 +1,8 @@
 {
   "name": "カウントダウン",
   "short_name": "カウントダウン",
-  "description": "大切な日までのカウントダウン",
-  "start_url": "/",
+  "description": "BGPまでのカウントダウン",
+  "start_url": "/bgp",
   "display": "standalone",
   "background_color": "#667eea",
   "theme_color": "#667eea",
