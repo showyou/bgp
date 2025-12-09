@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sandglass for BGP</title>
+    <title>カウントダウン</title>
+    
+    <!-- PWA設定 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="カウントダウン">
+    <meta name="theme-color" content="#667eea">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon.svg">
+    <link rel="icon" type="image/svg+xml" href="icon.svg">
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -92,7 +102,7 @@
 <body>
     <div class="countdown-container">
         <h1 class="header-title">
-            <i class="fas fa-clock"></i> Sandglass for BGP
+            <i class="fas fa-clock"></i> カウントダウン
         </h1>
         
         <div id="countdown-1" class="countdown-card">
@@ -152,9 +162,9 @@
         <div id="countdown-3" class="countdown-card">
             <div class="countdown-title">
                 <div class="icon-circle">
-                    <i class="fas fa-anchor"></i>
+                    <i class="fas fa-calendar-alt"></i>
                 </div>
-                <span>2026年5月23日まで</span>
+                <span>2026年5月7日まで</span>
             </div>
             <div class="countdown-display">
                 <div class="time-unit">
@@ -179,9 +189,9 @@
         <div id="countdown-4" class="countdown-card">
             <div class="countdown-title">
                 <div class="icon-circle">
-                    <i class="fas fa-ship"></i>
+                    <i class="fas fa-anchor"></i>
                 </div>
-                <span>2026年5月30日まで</span>
+                <span>2026年5月23日まで</span>
             </div>
             <div class="countdown-display">
                 <div class="time-unit">
@@ -206,9 +216,9 @@
         <div id="countdown-5" class="countdown-card">
             <div class="countdown-title">
                 <div class="icon-circle">
-                    <i class="fas fa-baseball"></i>
+                    <i class="fas fa-ship"></i>
                 </div>
-                <span>2026年7月12日まで</span>
+                <span>2026年5月30日まで</span>
             </div>
             <div class="countdown-display">
                 <div class="time-unit">
@@ -229,15 +239,43 @@
                 </div>
             </div>
         </div>
+
+        <div id="countdown-6" class="countdown-card">
+            <div class="countdown-title">
+                <div class="icon-circle">
+                    <i class="fas fa-baseball"></i>
+                </div>
+                <span>2026年7月12日まで</span>
+            </div>
+            <div class="countdown-display">
+                <div class="time-unit">
+                    <span class="time-number" id="days-6">0</span>
+                    <span class="time-label">日</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="hours-6">0</span>
+                    <span class="time-label">時間</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="minutes-6">0</span>
+                    <span class="time-label">分</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="seconds-6">0</span>
+                    <span class="time-label">秒</span>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
         const countdowns = [
             { date: new Date('2026-03-31T00:00:00'), id: 1 },
             { date: new Date('2026-05-02T00:00:00'), id: 2 },
-            { date: new Date('2026-05-23T00:00:00'), id: 3 },
-            { date: new Date('2026-05-30T00:00:00'), id: 4 },
-            { date: new Date('2026-07-12T00:00:00'), id: 5 }
+            { date: new Date('2026-05-07T00:00:00'), id: 3 },
+            { date: new Date('2026-05-23T00:00:00'), id: 4 },
+            { date: new Date('2026-05-30T00:00:00'), id: 5 },
+            { date: new Date('2026-07-12T00:00:00'), id: 6 }
         ];
 
         function updateCountdown(targetDate, id) {
