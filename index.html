@@ -105,6 +105,33 @@
             <i class="fas fa-clock"></i> カウントダウン
         </h1>
         
+        <div id="countdown-7" class="countdown-card">
+            <div class="countdown-title">
+                <div class="icon-circle">
+                    <i class="fas fa-spa"></i>
+                </div>
+                <span>2026年3月30日 20:00まで</span>
+            </div>
+            <div class="countdown-display">
+                <div class="time-unit">
+                    <span class="time-number" id="days-7">0</span>
+                    <span class="time-label">日</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="hours-7">0</span>
+                    <span class="time-label">時間</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="minutes-7">0</span>
+                    <span class="time-label">分</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="seconds-7">0</span>
+                    <span class="time-label">秒</span>
+                </div>
+            </div>
+        </div>
+
         <div id="countdown-1" class="countdown-card">
             <div class="countdown-title">
                 <div class="icon-circle">
@@ -164,7 +191,7 @@
                 <div class="icon-circle">
                     <i class="fas fa-calendar-alt"></i>
                 </div>
-                <span>2026年5月7日まで</span>
+                <span>2026年5月8日まで</span>
             </div>
             <div class="countdown-display">
                 <div class="time-unit">
@@ -270,9 +297,10 @@
 
     <script>
         const countdowns = [
+            { date: new Date('2026-03-30T20:00:00'), id: 7 },
             { date: new Date('2026-03-31T00:00:00'), id: 1 },
             { date: new Date('2026-05-02T00:00:00'), id: 2 },
-            { date: new Date('2026-05-07T00:00:00'), id: 3 },
+            { date: new Date('2026-05-08T00:00:00'), id: 3 },
             { date: new Date('2026-05-23T00:00:00'), id: 4 },
             { date: new Date('2026-05-30T00:00:00'), id: 5 },
             { date: new Date('2026-07-12T00:00:00'), id: 6 }
